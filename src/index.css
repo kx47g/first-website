@@ -1,0 +1,96 @@
+button {
+border-radius: 5px;
+width: 100px;
+height: 100px;
+}
+div {
+font-size: 30px;
+font-weight: bold;
+}
+#number-brank{
+display: none;
+}
+.number-button {
+background-color: skyblue;
+font-size: 70px;
+}
+#number-brank {
+position: absolute;
+top: 50px;
+left:10px;
+}
+#number-1 {
+position: absolute;
+top: 50px;
+left:112px;
+}
+#number-2 {
+position: absolute;
+top: 50px;
+left:214px;
+}
+#number-3 {
+position: absolute;
+top: 50px;
+left:316px;
+}
+#number-4 {
+position: absolute;
+top: 152px;
+left:10px;
+}
+#number-5 {
+position: absolute;
+top: 152px;
+left:112px;
+}
+#number-6 {
+position: absolute;
+top: 152px;
+left:214px;
+}
+#number-7 {
+position: absolute;
+top: 152px;
+left:316px;
+}
+#number-8 {
+position: absolute;
+top: 254px;
+left:10px;
+}
+#number-9 {
+position: absolute;
+top: 254px;
+left:112px;
+}
+#number-10 {
+position: absolute;
+top: 254px;
+left:214px;
+}
+#number-11 {
+position: absolute;
+top: 254px;
+left:316px;
+}
+#number-12 {
+position: absolute;
+top: 356px;
+left:10px;
+}
+#number-13 {
+position: absolute;
+top: 356px;
+left:112px;
+}
+#number-14 {
+position: absolute;
+top: 356px;
+left:214px;
+}
+#number-15 {
+position: absolute;
+top: 356px;
+left:316px;
+}
