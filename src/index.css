@@ -7,14 +7,12 @@ div {
 font-size: 30px;
 font-weight: bold;
 }
-#number-brank{
-display: none;
-}
 .number-button {
-background-color: rgb(100, 85, 236);
+background: rgb(100, 85, 236);
 font-size: 70px;
 }
 #number-brank {
+display: none;
 position: absolute;
 top: 50px;
 left:10px;
