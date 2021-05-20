@@ -1,5 +1,5 @@
 document.addEventListener('click', (event) => {
-  const btn = document.getElementById('number-1');
+  const btn = document.getElementByClassName('number-button');
   btn.style.backgroundColor = "orange";
 });
 
