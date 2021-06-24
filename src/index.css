@@ -19,12 +19,12 @@ font-size: 0px;
 top: 356px;
 left:316px;
 }
-#number-text {
+#reset-button {
     position: absolute;
-    background: rgb(0, 0, 0);
-    font-size: 0px;
-    top: 152px;
-    left: 214px;
+    background: rgb(0, 200, 100);
+    font-size: 40px;
+    top: 50px;
+    left:418px;
     }
 #number-1 {
 position: absolute;

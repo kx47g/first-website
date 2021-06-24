@@ -1,4 +1,3 @@
-const shuffle_numbers = parseInt(Math.random(1,3)*3, 10);
 document.addEventListener('DOMContentLoaded', () => {
   for (const $e of document.getElementsByClassName('number-button')) {
     $e.addEventListener('click', () => {
@@ -20,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const btn13 = document.getElementById('number-13');
       const btn14 = document.getElementById('number-14');
       const btn15 = document.getElementById('number-15');
+      const btnreset = document.getElementById('reset-button');
 
 
       element = btn0
@@ -100,22 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
           //クリア条件を満たしていない時はパズルの色は通常のまま
-          if (!(parseInt(style_1.top, 10) == 50 & parseInt(style_1.left, 10) == 10 &&
-          parseInt(style_22.top, 10) == 50 & parseInt(style_22.left, 10) == 112 &&
-          parseInt(style_3.top, 10) == 50 & parseInt(style_3.left, 10) == 214 &&
-          parseInt(style_4.top, 10) == 50 & parseInt(style_4.left, 10) == 316 &&
-          parseInt(style_5.top, 10) == 152 & parseInt(style_5.left, 10) == 10 &&
-          parseInt(style_6.top, 10) == 152 & parseInt(style_6.left, 10) == 112 &&
-          parseInt(style_7.top, 10) == 152 & parseInt(style_7.left, 10) == 214 &&
-          parseInt(style_8.top, 10) == 152 & parseInt(style_8.left, 10) == 316 &&
-          parseInt(style_9.top, 10) == 254 & parseInt(style_9.left, 10) == 10 &&
-          parseInt(style_10.top, 10) == 254 & parseInt(style_10.left, 10) == 112 &&
-          parseInt(style_11.top, 10) == 254 & parseInt(style_11.left, 10) == 214 &&
-          parseInt(style_12.top, 10) == 254 & parseInt(style_12.left, 10) == 316 &&
-          parseInt(style_13.top, 10) == 356 & parseInt(style_13.left, 10) == 10 &&
-          parseInt(style_14.top, 10) == 356 & parseInt(style_14.left, 10) == 112 &&
-          parseInt(style_15.top, 10) == 356 & parseInt(style_15.left, 10) == 214 &&
-          parseInt(style2.top, 10) == 356 & parseInt(style2.left, 10) == 316 ))
+          else
           {
             btn0.style.backgroundColor = 'black';
             btn1.style.backgroundColor = 'blue';
@@ -134,6 +119,48 @@ document.addEventListener('DOMContentLoaded', () => {
             btn14.style.backgroundColor = 'blue';
             btn15.style.backgroundColor = 'blue';
           }
+
+      //シャッフル処理
+      if ( (parseInt(style2.left, 10) == 418) )
+      {
+        console.log('リセットボタンが押されました');
+        var shuffle_pazule_number;
+        shuffle_pazule_number = parseInt(Math.random(0,2)*3, 10);
+        console.log(shuffle_pazule_number);
+
+        //リセットを押したとき、もしパターン0ならば、次の入れ替え処理を動かす。
+        if (shuffle_pazule_number == 0){
+          //パズルの 1 と 4 を入れ替え
+          save = style_1.top;
+          save2 = style_1.left;
+          btn1.style.top = style_4.top;
+          btn1.style.left = style_4.left;
+          btn4.style.top = save;
+          btn4.style.left = save2;
+        }
+
+        //リセットを押したとき、もしパターン1ならば、次の入れ替え処理を動かす。
+        if (shuffle_pazule_number == 1){
+          save = style_3.top;
+          save2 = style_3.left;
+          btn3.style.top = style_7.top;
+          btn3.style.left = style_7.left;
+          btn7.style.top = save;
+          btn7.style.left = save2;
+        }
+
+        //リセットを押したとき、もしパターン2ならば、次の入れ替え処理を動かす。
+        if (shuffle_pazule_number == 2){
+          save = style_22.top;
+          save2 = style_22.left;
+          btn2.style.top = style_12.top;
+          btn2.style.left = style_12.left;
+          btn12.style.top = save;
+          btn12.style.left = save2;
+        }
+      }
+
+      //パズルの移動処理、マウスで移動させたいパズルをクリックする。
       if 
         //上下１マス 左右１マス の斜め移動を禁止
         ((!((parseInt(style2.top, 10) - parseInt(style.top, 10))**2 == 10404 && 
@@ -166,39 +193,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });    
-
-document.addEventListener('keydown', (event) => {
-  switch (event.key) {
-    case 'ArrowUp': {
-      const button = document.getElementById('number-2'); // DOM を取得する命令
-
-      button.style.top = `${Number(button.style.top.split('px')[0]) - 10}px`;
-
-      break;
-    }
-45
-    case 'ArrowDown': {
-      const button = document.getElementById('number-2'); // DOM を取得する命令
-
-      button.style.top = `${Number(button.style.top.split('px')[0]) + 10}px`;
-
-      break;
-    }
-
-    case 'ArrowRight': {
-      const button = document.getElementById('number-2'); // DOM を取得する命令
-
-      button.style.left = `${Number(button.style.left.split('px')[0]) + 10}px`;
-
-      break;
-    }
-
-    case 'ArrowLeft': {
-      const button = document.getElementById('number-2'); // DOM を取得する命令
-
-      button.style.left = `${Number(button.style.left.split('px')[0]) - 10}px`;
-
-      break;
-    }
-  }
-});
