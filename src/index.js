@@ -1,7 +1,10 @@
+let defaultPosition = []
+
 document.addEventListener('DOMContentLoaded', () => {
   for (const $e of document.getElementsByClassName('number-button')) {
     $e.addEventListener('click', () => {
       console.log('Clicked',$e.id);
+      //全てのボタンを認識させる
       const btn = document.getElementById($e.id);
       const btn0 = document.getElementById('number-brank');
       const btn1 = document.getElementById('number-1');
@@ -21,12 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const btn15 = document.getElementById('number-15');
       const btnreset = document.getElementById('reset-button');
 
-
+      //パズルをクリックで移動させるためのスタイルの定義
       element = btn0
       style = element.currentStyle || document.defaultView.getComputedStyle(element, '');
       element2 = btn;
       style2 = element2.currentStyle || document.defaultView.getComputedStyle(element2, '');
       
+      //シャッフルとクリア判定のためにスタイルを定義
       element_1 = btn1
       style_1 = element.currentStyle || document.defaultView.getComputedStyle(element_1, '');
       element_22 = btn2
@@ -60,6 +64,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
       save = style2.top;
       save2 = style2.left;
+
+      //シャッフル処理のために各パズルの初期位置を取得
+      defaultPosition = [
+        { top: style_1.top, left: style_1.left},
+        { top: style_22.top, left: style_22.left},
+        { top: style_3.top, left: style_3.left},
+        { top: style_4.top, left: style_4.left},
+        { top: style_5.top, left: style_5.left},
+        { top: style_6.top, left: style_6.left},
+        { top: style_7.top, left: style_7.left},
+        { top: style_8.top, left: style_8.left},
+        { top: style_9.top, left: style_9.left},
+        { top: style_10.top, left: style_10.left},
+        { top: style_11.top, left: style_11.left},
+        { top: style_12.top, left: style_12.left},
+        { top: style_13.top, left: style_13.left},
+        { top: style_14.top, left: style_14.left},
+        { top: style_15.top, left: style_15.left},
+        { top: style.top, left: style.left}
+      ]
+      console.log(defaultPosition)
 
       //クリア処理　ボタンが正しい位置にあればコンソールにクリアメッセージを表示
       //パズル全体の色をオレンジに変更
@@ -123,41 +148,43 @@ document.addEventListener('DOMContentLoaded', () => {
       //シャッフル処理
       if ( (parseInt(style2.left, 10) == 418) )
       {
-        console.log('リセットボタンが押されました');
-        var shuffle_pazule_number;
-        shuffle_pazule_number = parseInt(Math.random(0,2)*3, 10);
-        console.log(shuffle_pazule_number);
-
-        //リセットを押したとき、もしパターン0ならば、次の入れ替え処理を動かす。
-        if (shuffle_pazule_number == 0){
-          //パズルの 1 と 4 を入れ替え
-          save = style_1.top;
-          save2 = style_1.left;
-          btn1.style.top = style_4.top;
-          btn1.style.left = style_4.left;
-          btn4.style.top = save;
-          btn4.style.left = save2;
-        }
-
-        //リセットを押したとき、もしパターン1ならば、次の入れ替え処理を動かす。
-        if (shuffle_pazule_number == 1){
-          save = style_3.top;
-          save2 = style_3.left;
-          btn3.style.top = style_7.top;
-          btn3.style.left = style_7.left;
-          btn7.style.top = save;
-          btn7.style.left = save2;
-        }
-
-        //リセットを押したとき、もしパターン2ならば、次の入れ替え処理を動かす。
-        if (shuffle_pazule_number == 2){
-          save = style_22.top;
-          save2 = style_22.left;
-          btn2.style.top = style_12.top;
-          btn2.style.left = style_12.left;
-          btn12.style.top = save;
-          btn12.style.left = save2;
-        }
+        shuffle_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] //空リストの作成
+        shuffle_list = _.shuffle(shuffle_list); //２回シャッフルする
+        shuffle_list = _.shuffle(shuffle_list);
+        console.log(shuffle_list)
+        //あらかじめ取得した初期位置と乱数のリストを参照してシャッフル
+        btn0.style.top = defaultPosition[shuffle_list[0]].top;
+        btn0.style.left = defaultPosition[shuffle_list[0]].left;
+        btn1.style.top = defaultPosition[shuffle_list[1]].top;
+        btn1.style.left = defaultPosition[shuffle_list[1]].left;
+        btn2.style.top = defaultPosition[shuffle_list[2]].top;
+        btn2.style.left = defaultPosition[shuffle_list[2]].left;
+        btn3.style.top = defaultPosition[shuffle_list[3]].top;
+        btn3.style.left = defaultPosition[shuffle_list[3]].left;
+        btn4.style.top = defaultPosition[shuffle_list[4]].top;
+        btn4.style.left = defaultPosition[shuffle_list[4]].left;
+        btn5.style.top = defaultPosition[shuffle_list[5]].top;
+        btn5.style.left = defaultPosition[shuffle_list[5]].left;
+        btn6.style.top = defaultPosition[shuffle_list[6]].top;
+        btn6.style.left = defaultPosition[shuffle_list[6]].left;
+        btn7.style.top = defaultPosition[shuffle_list[7]].top;
+        btn7.style.left = defaultPosition[shuffle_list[7]].left;
+        btn8.style.top = defaultPosition[shuffle_list[8]].top;
+        btn8.style.left = defaultPosition[shuffle_list[8]].left;
+        btn9.style.top = defaultPosition[shuffle_list[9]].top;
+        btn9.style.left = defaultPosition[shuffle_list[9]].left;
+        btn10.style.top = defaultPosition[shuffle_list[10]].top;
+        btn10.style.left = defaultPosition[shuffle_list[10]].left;
+        btn11.style.top = defaultPosition[shuffle_list[11]].top;
+        btn11.style.left = defaultPosition[shuffle_list[11]].left;
+        btn12.style.top = defaultPosition[shuffle_list[12]].top;
+        btn12.style.left = defaultPosition[shuffle_list[12]].left;
+        btn13.style.top = defaultPosition[shuffle_list[13]].top;
+        btn13.style.left = defaultPosition[shuffle_list[13]].left;
+        btn14.style.top = defaultPosition[shuffle_list[14]].top;
+        btn14.style.left = defaultPosition[shuffle_list[14]].left;
+        btn15.style.top = defaultPosition[shuffle_list[15]].top;
+        btn15.style.left = defaultPosition[shuffle_list[15]].left;
       }
 
       //パズルの移動処理、マウスで移動させたいパズルをクリックする。
@@ -177,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //上下３マス 左右１マス の斜め移動を禁止
         (!((parseInt(style2.top, 10) - parseInt(style.top, 10))**2 == 93636 && 
         (parseInt(style2.left, 10) - parseInt(style.left, 10))**2 == 10404)) &&
+        (!((parseInt(style2.left, 10) == 418))) &&
         //移動可能
         ((parseInt(style2.top, 10) - parseInt(style.top, 10))**2 == 10404 || 
         (parseInt(style2.left, 10) - parseInt(style.left, 10))**2 == 10404)) {
