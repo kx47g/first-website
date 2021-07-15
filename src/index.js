@@ -106,22 +106,22 @@ document.addEventListener('DOMContentLoaded', () => {
           parseInt(style2.top, 10) == 356 & parseInt(style2.left, 10) == 316 )
           {
             console.log('ゲームクリア!おめでとう!');
-            btn0.style.backgroundColor = 'yellow';
-            btn1.style.backgroundColor = 'yellow';
-            btn2.style.backgroundColor = 'yellow';
-            btn3.style.backgroundColor = 'yellow';
-            btn4.style.backgroundColor = 'yellow';
-            btn5.style.backgroundColor = 'yellow';
-            btn6.style.backgroundColor = 'yellow';
-            btn7.style.backgroundColor = 'yellow';
-            btn8.style.backgroundColor = 'yellow';
-            btn9.style.backgroundColor = 'yellow';
-            btn10.style.backgroundColor = 'yellow';
-            btn11.style.backgroundColor = 'yellow';
-            btn12.style.backgroundColor = 'yellow';
-            btn13.style.backgroundColor = 'yellow';
-            btn14.style.backgroundColor = 'yellow';
-            btn15.style.backgroundColor = 'yellow';
+            btn0.style.backgroundColor = 'orange';
+            btn1.style.backgroundColor = 'orange';
+            btn2.style.backgroundColor = 'orange';
+            btn3.style.backgroundColor = 'orange';
+            btn4.style.backgroundColor = 'orange';
+            btn5.style.backgroundColor = 'orange';
+            btn6.style.backgroundColor = 'orange';
+            btn7.style.backgroundColor = 'orange';
+            btn8.style.backgroundColor = 'orange';
+            btn9.style.backgroundColor = 'orange';
+            btn10.style.backgroundColor = 'orange';
+            btn11.style.backgroundColor = 'orange';
+            btn12.style.backgroundColor = 'orange';
+            btn13.style.backgroundColor = 'orange';
+            btn14.style.backgroundColor = 'orange';
+            btn15.style.backgroundColor = 'orange';
           }
 
           //クリア条件を満たしていない時はパズルの色は通常のまま
