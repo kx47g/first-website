@@ -106,43 +106,43 @@ document.addEventListener('DOMContentLoaded', () => {
           parseInt(style2.top, 10) == 356 & parseInt(style2.left, 10) == 316 )
           {
             console.log('ゲームクリア!おめでとう!');
-            btn0.style.backgroundColor = 'orange';
-            btn1.style.backgroundColor = 'orange';
-            btn2.style.backgroundColor = 'orange';
-            btn3.style.backgroundColor = 'orange';
-            btn4.style.backgroundColor = 'orange';
-            btn5.style.backgroundColor = 'orange';
-            btn6.style.backgroundColor = 'orange';
-            btn7.style.backgroundColor = 'orange';
-            btn8.style.backgroundColor = 'orange';
-            btn9.style.backgroundColor = 'orange';
-            btn10.style.backgroundColor = 'orange';
-            btn11.style.backgroundColor = 'orange';
-            btn12.style.backgroundColor = 'orange';
-            btn13.style.backgroundColor = 'orange';
-            btn14.style.backgroundColor = 'orange';
-            btn15.style.backgroundColor = 'orange';
+            btn0.style.backgroundColor = 'yellow';
+            btn1.style.backgroundColor = 'yellow';
+            btn2.style.backgroundColor = 'yellow';
+            btn3.style.backgroundColor = 'yellow';
+            btn4.style.backgroundColor = 'yellow';
+            btn5.style.backgroundColor = 'yellow';
+            btn6.style.backgroundColor = 'yellow';
+            btn7.style.backgroundColor = 'yellow';
+            btn8.style.backgroundColor = 'yellow';
+            btn9.style.backgroundColor = 'yellow';
+            btn10.style.backgroundColor = 'yellow';
+            btn11.style.backgroundColor = 'yellow';
+            btn12.style.backgroundColor = 'yellow';
+            btn13.style.backgroundColor = 'yellow';
+            btn14.style.backgroundColor = 'yellow';
+            btn15.style.backgroundColor = 'yellow';
           }
 
           //クリア条件を満たしていない時はパズルの色は通常のまま
           else
           {
             btn0.style.backgroundColor = 'black';
-            btn1.style.backgroundColor = 'blue';
-            btn2.style.backgroundColor = 'blue';
-            btn3.style.backgroundColor = 'blue';
-            btn4.style.backgroundColor = 'blue';
-            btn5.style.backgroundColor = 'blue';
-            btn6.style.backgroundColor = 'blue';
-            btn7.style.backgroundColor = 'blue';
-            btn8.style.backgroundColor = 'blue';
-            btn9.style.backgroundColor = 'blue';
-            btn10.style.backgroundColor = 'blue';
-            btn11.style.backgroundColor = 'blue';
-            btn12.style.backgroundColor = 'blue';
-            btn13.style.backgroundColor = 'blue';
-            btn14.style.backgroundColor = 'blue';
-            btn15.style.backgroundColor = 'blue';
+            btn1.style.backgroundColor = 'lightpink';
+            btn2.style.backgroundColor = 'lightpink';
+            btn3.style.backgroundColor = 'lightpink';
+            btn4.style.backgroundColor = 'lightpink';
+            btn5.style.backgroundColor = 'lightpink';
+            btn6.style.backgroundColor = 'lightpink';
+            btn7.style.backgroundColor = 'lightpink';
+            btn8.style.backgroundColor = 'lightpink';
+            btn9.style.backgroundColor = 'lightpink';
+            btn10.style.backgroundColor = 'lightpink';
+            btn11.style.backgroundColor = 'lightpink';
+            btn12.style.backgroundColor = 'lightpink';
+            btn13.style.backgroundColor = 'lightpink';
+            btn14.style.backgroundColor = 'lightpink';
+            btn15.style.backgroundColor = 'lightpink';
           }
 
       //シャッフル処理
